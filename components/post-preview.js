@@ -2,7 +2,7 @@ import Avatar from '../components/avatar'
 import Date from '../components/date'
 import CoverImage from './cover-image'
 import Link from 'next/link'
-import {imageBuilder} from '../lib/sanity'
+import { imageBuilder } from '../lib/sanity'
 export default function PostPreview({
   title,
   coverImage,
@@ -12,7 +12,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
+    <div className="p-4">
       <div className="mb-5">
         <CoverImage slug={slug} title={title} imageObject={coverImage} url={imageBuilder(coverImage).url()} />
       </div>
