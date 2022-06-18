@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function HeroPost({
   title,
+  introduction,
   coverImage,
   date,
   excerpt,
@@ -24,6 +25,7 @@ export default function HeroPost({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
+            <p>introduction{introduction}</p>
             <Date dateString={date} />
           </div>
         </div>
