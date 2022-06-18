@@ -1,8 +1,10 @@
 import Container from './container'
 import cn from 'classnames'
+import { useTheme } from 'next-themes'
 import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
+  const { theme, setTheme } = useTheme()
   return (
     <div
       className={cn('border-b', {
@@ -12,6 +14,11 @@ export default function Alert({ preview }) {
     >
       <Container>
         <div className="py-2 text-center text-sm">
+          <div>
+            The current theme is: {theme}
+            <button onClick={() => setTheme('light')}>Light Mode</button>
+            <button onClick={() => setTheme('dark')}>Dark Mode</button>
+          </div>
           {preview ? (
             <>
               This page is a preview.{' '}

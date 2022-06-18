@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'next-themes'
+import '../styles/index.css'
 
 function MyApp({ Component, pageProps }) {
   return (
